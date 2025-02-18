@@ -52,12 +52,9 @@ nav > a {
     margin-left: 2em;
 }
 
-form, fieldset, nav {
-    margin: 1em 0 1em 0;
-}
-
-input, button {
-    margin: 0.5em 0 0.5em 0;
+:not(:is(ul, ol) > *) {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 img:not([width], [height]), figure, video {
@@ -98,6 +95,6 @@ a:has(h1, h2, h3, h4, h5, h6) {
     color: black;
 }
 
-label, input:not([type="checkbox"], [type="radio"]) {
+label, input:not([type="checkbox"], [type="radio"]), select {
     display: block;
 }
