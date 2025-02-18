@@ -1,0 +1,103 @@
+@media (min-aspect-ratio: 1.2) {
+    body > * {
+        width: 45vw;
+    }
+}
+
+@media (max-aspect-ratio: 1.2) {
+    body > :not(header, footer) {
+        width: 90vw;
+    }
+    header, footer {
+        width: 100vw;
+    }
+}
+
+:root {
+    font-family: sans-serif;
+}
+
+:first-child {
+    margin-top: 0;
+}
+
+:last-child {
+    margin-bottom: 0;
+}
+
+body > * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    margin: 0;
+}
+
+header, footer {
+    padding: 1em 2em 1em 2em;
+    background: lightgrey;
+    box-sizing: border-box;
+}
+
+footer {
+    margin-top: 1em;
+}
+
+header {
+    margin-bottom: 1em;
+}
+
+nav > a {
+    margin-left: 2em;
+}
+
+form, fieldset, nav {
+    margin: 1em 0 1em 0;
+}
+
+input, button {
+    margin: 0.5em 0 0.5em 0;
+}
+
+img:not([width], [height]), figure, video {
+    width: min(30rem, 95%);
+    height: auto;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+table {
+    margin: 1em auto 1em auto;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 2px solid black;
+}
+
+td, th {
+    padding: 2px 10px 2px 10px;
+}
+
+hr {
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:has(h1, h2, h3, h4, h5, h6) {
+    color: black;
+}
+
+label, input:not([type="checkbox"], [type="radio"]) {
+    display: block;
+}
