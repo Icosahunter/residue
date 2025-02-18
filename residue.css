@@ -2,11 +2,15 @@
     body > * {
         width: 45vw;
     }
+
+    header, footer {
+        width: calc(45vw + 2em);
+    }
 }
 
 @media (max-aspect-ratio: 1.2) {
     body > :not(header, footer) {
-        width: 90vw;
+        width: calc(100vw - 2em);
     }
     header, footer {
         width: 100vw;
@@ -52,7 +56,7 @@ nav > a {
     margin-left: 2em;
 }
 
-:not(:is(ul, ol) > *) {
+:not(body, :is(ul, ol) > *) {
     margin-top: 1em;
     margin-bottom: 1em;
 }
