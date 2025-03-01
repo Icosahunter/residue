@@ -1,104 +1,73 @@
-@media (min-aspect-ratio: 1.2) {
-    body > * {
-        width: 45vw;
-    }
-
-    header, footer {
-        width: calc(45vw + 2em);
-    }
+:root{
+    margin: 0;
+    font-family: Sans-Serif;
 }
 
-@media (max-aspect-ratio: 1.2) {
-    body > :not(header, footer) {
-        width: calc(100vw - 2em);
-    }
-    header, footer {
-        width: 100vw;
+@media (prefers-color-scheme:dark){
+    :root {
+        background: black;
+        color: #fff;
     }
 }
 
-:root {
-    font-family: sans-serif;
-}
-
-:first-child {
-    margin-top: 0;
-}
-
-:last-child {
-    margin-bottom: 0;
+* {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 body > * {
+    width: min(calc(100vw - 2em), 150vh);
     margin-left: auto;
     margin-right: auto;
 }
 
-body {
+body, input:is([type="checkbox"], [type="radio"]), legend {
     margin: 0;
 }
 
-header, footer {
-    padding: 1em 2em 1em 2em;
-    background: lightgrey;
-    box-sizing: border-box;
-}
-
-footer {
-    margin-top: 1em;
-}
-
-header {
-    margin-bottom: 1em;
-}
-
-nav > a {
-    margin-left: 2em;
-}
-
-:not(body, :is(ul, ol) > *) {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-img:not([width], [height]), figure, video {
-    width: min(30rem, 95%);
-    height: auto;
+input:not([type="checkbox"], [type="radio"], [type="reset"], [type="submit"], [type="button"]), select, label {
     display: block;
-    margin: 0 auto 0 auto;
 }
 
-table {
-    margin: 1em auto 1em auto;
-    border-collapse: collapse;
+img, video, table, figure {
+    width: min(100%, 25rem);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
-th {
-    border-bottom: 2px solid black;
+:is(p, span, h1, h2, h3, h4, h5, h6) img {
+    margin: 0;
+    height: 1.5em;
+    width: auto;
+    display: inline;
+    vertical-align: middle;
 }
 
-td, th {
-    padding: 2px 10px 2px 10px;
+th, td {
+    padding: 0.5em 1em;
 }
 
-hr {
-    border: none;
-    border-bottom: 2px solid black;
+header, footer {
+    margin: 0 auto;
+    padding: 0.1em 2em;
+    background: #8883;
+    box-sizing: border-box;
+    width: min(100vw, calc(150vh + 2em));
+}
+
+nav > :not(:first-child) {
+    margin-left: 1em;
 }
 
 a {
     text-decoration: none;
-    cursor: pointer;
 }
 
-a:hover {
+a:active {
     text-decoration: underline;
 }
 
 a:has(h1, h2, h3, h4, h5, h6) {
-    color: black;
-}
-
-label, input:not([type="checkbox"], [type="radio"]), select {
-    display: block;
+    color: unset;
 }
