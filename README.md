@@ -3,7 +3,7 @@
     <h1> Residue </h1>
 </div>
 
-A super minimal responsive classless CSS framework, coming in at just under 900 Bytes minified and under 500 Bytes minified and gzipped.
+A super minimal responsive classless CSS framework, coming in at just under 1kB minified and under 600 *Bytes* minified and gzipped.
 
 > [!WARNING]
 > Residue is still in development and not yet ready for production use.
