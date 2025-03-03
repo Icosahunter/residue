@@ -5,7 +5,7 @@
 
 A super minimal responsive classless CSS framework, coming in at just under 1kB minified and under 600 *Bytes* minified and gzipped.
 
-> [!WARNING]
+> [!NOTE]
 > Residue is still in development and not yet ready for production use.
 
 You can see it in action [here](https://icosahunter.github.io/residue/).
