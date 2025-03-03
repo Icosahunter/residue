@@ -16,13 +16,37 @@
 }
 
 body > * {
-    width: min(calc(100vw - 2em), 150vh);
+    width: min(70em, calc(100vw - 2em));
     margin-left: auto;
     margin-right: auto;
 }
 
 body, input:is([type="checkbox"], [type="radio"]), legend {
     margin: 0;
+}
+
+body > :is(header, footer) {
+    margin: 0 auto;
+    padding: 1px 2em;
+    background: #8883;
+    box-sizing: border-box;
+    width: min(72em, calc(130vw + 2em));
+}
+
+nav > :not(:first-child) {
+    margin-left: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:has(h1, h2, h3, h4, h5, h6) {
+    color: unset;
 }
 
 input:not([type="checkbox"], [type="radio"], [type="reset"], [type="submit"], [type="button"]), select, label {
@@ -36,7 +60,7 @@ img, video, table, figure {
     display: block;
 }
 
-:is(p, span, h1, h2, h3, h4, h5, h6) img {
+:is(p, span, h1, h2, h3, h4, h5, h6, header, footer) img {
     margin: 0;
     height: 1.5em;
     width: auto;
@@ -48,26 +72,12 @@ th, td {
     padding: 0.5em 1em;
 }
 
-header, footer {
-    margin: 0 auto;
-    padding: 0.1em 2em;
+code, kbd, output, samp {
+    font-family: monospace;
     background: #8883;
-    box-sizing: border-box;
-    width: min(100vw, calc(150vh + 2em));
+    padding: 4px;
 }
 
-nav > :not(:first-child) {
-    margin-left: 1em;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:active {
-    text-decoration: underline;
-}
-
-a:has(h1, h2, h3, h4, h5, h6) {
-    color: unset;
+code {
+    display: block;
 }
