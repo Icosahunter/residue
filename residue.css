@@ -11,14 +11,12 @@
 }
 
 * {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em 0;
 }
 
 body > * {
     width: min(70em, calc(100vw - 2em));
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em auto;
 }
 
 body, input:is([type="checkbox"], [type="radio"]), legend {
@@ -30,7 +28,7 @@ body > :is(header, footer) {
     padding: 1px 2em;
     background: #8883;
     box-sizing: border-box;
-    width: min(72em, calc(130vw + 2em));
+    width: min(72em, calc(100vw));
 }
 
 nav > :not(:first-child) {
@@ -49,14 +47,17 @@ a:has(h1, h2, h3, h4, h5, h6) {
     color: unset;
 }
 
-input:not([type="checkbox"], [type="radio"], [type="reset"], [type="submit"], [type="button"]), select, label {
+form :is(label, select, :not(label) > input)  {
+    display: block;
+}
+
+code {
     display: block;
 }
 
 img, video, table, figure {
     width: min(100%, 25rem);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em auto;
     display: block;
 }
 
@@ -76,8 +77,4 @@ code, kbd, output, samp {
     font-family: monospace;
     background: #8883;
     padding: 4px;
-}
-
-code {
-    display: block;
 }
