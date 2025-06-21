@@ -51,22 +51,29 @@ form :is(label, select, :not(label) > input)  {
     display: block;
 }
 
-code {
-    display: block;
-}
-
-img, video, table, figure {
-    width: min(100%, 25rem);
+img, svg, video, figure {
     margin: 1em auto;
     display: block;
 }
 
-:is(p, span, h1, h2, h3, h4, h5, h6, header, footer) img {
+:is(img, svg):not([height], [width]), video, figure {
+    width: min(100%, 25rem);
+}
+
+table {
+    margin: 1em auto;
+}
+
+:is(p, span, h1, h2, h3, h4, h5, h6, li) :is(img, svg):not([height], [width]) {
     margin: 0;
     height: 1.5em;
-    width: auto;
+    width: unset;
     display: inline;
     vertical-align: middle;
+}
+
+summary * {
+    display: inline;
 }
 
 th, td {
@@ -77,4 +84,18 @@ code, kbd, output, samp {
     font-family: monospace;
     background: #8883;
     padding: 4px;
+}
+
+pre > code {
+    display: block;
+    overflow-x: scroll;
+}
+
+li :not(li, ul, ol, menu){
+    margin: unset;
+    display: inline;
+}
+
+dialog {
+    margin: auto;
 }
