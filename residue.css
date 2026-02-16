@@ -1,3 +1,6 @@
+/* MIT License | Copyright (c) 2025 Icosahunter */
+
+/* --- General --- */
 :root{
     margin: 0;
     font-family: Sans-Serif;
@@ -14,13 +17,15 @@
     margin: 1em 0;
 }
 
+/* --- Body, Header, Footer --- */
+
+body {
+    margin: 0;
+}
+
 body > * {
     width: min(70em, calc(100vw - 2em));
     margin: 1em auto;
-}
-
-body, input:is([type="checkbox"], [type="radio"]), legend {
-    margin: 0;
 }
 
 body > :is(header, footer) {
@@ -31,9 +36,7 @@ body > :is(header, footer) {
     width: min(72em, calc(100vw));
 }
 
-nav > :not(:first-child) {
-    margin-left: 1em;
-}
+/* --- Anchor --- */
 
 a {
     text-decoration: none;
@@ -47,38 +50,7 @@ a:has(h1, h2, h3, h4, h5, h6) {
     color: unset;
 }
 
-form :is(label, select, :not(label) > input)  {
-    display: block;
-}
-
-img, svg, video, figure {
-    margin: 1em auto;
-    display: block;
-}
-
-:is(img, svg):not([height], [width]), video, figure {
-    width: min(100%, 25rem);
-}
-
-table {
-    margin: 1em auto;
-}
-
-:is(p, span, h1, h2, h3, h4, h5, h6, li) :is(img, svg):not([height], [width]) {
-    margin: 0;
-    height: 1.5em;
-    width: unset;
-    display: inline;
-    vertical-align: middle;
-}
-
-summary * {
-    display: inline;
-}
-
-th, td {
-    padding: 0.5em 1em;
-}
+/* --- Code --- */
 
 code, kbd, output, samp {
     font-family: monospace;
@@ -91,11 +63,56 @@ pre > code {
     overflow-x: scroll;
 }
 
+/* --- List, Nav, Details --- */
+
 li :not(li, ul, ol, menu){
     margin: unset;
     display: inline;
 }
 
-dialog {
-    margin: auto;
+nav > :not(:first-child) {
+    margin-left: 1em;
+}
+
+summary * {
+    display: inline;
+}
+
+/* --- Form, Input --- */
+
+form :is(label, select, :not(label) > input)  {
+    display: block;
+}
+
+input:is([type="checkbox"], [type="radio"]), legend {
+    margin: 0;
+}
+
+/* --- Image --- */
+
+img, svg, video, figure {
+    margin: 1em auto;
+    display: block;
+}
+
+:is(img, svg):not([height], [width]), video, figure {
+    width: min(100%, 25rem);
+}
+
+:is(p, span, h1, h2, h3, h4, h5, h6, li) :is(img, svg):not([height], [width]) {
+    margin: 0;
+    height: 1.5em;
+    width: unset;
+    display: inline;
+    vertical-align: middle;
+}
+
+/* --- Table --- */
+
+table {
+    margin: 1em auto;
+}
+
+th, td {
+    padding: 0.5em 1em;
 }
